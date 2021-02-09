@@ -22,7 +22,7 @@
             @yield('nav')
             @yield('navigation')
         </header>
-        <main class="w-full flex flex-col bg-white p-4">
+        <main class="w-full flex flex-col bg-white">
             @yield('content')
         </main>
     </div>

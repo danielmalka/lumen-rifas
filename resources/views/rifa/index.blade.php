@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-    <div class="bg-gray-50 py-12 sm:px-6 lg:py-16 lg:px-8">
+    <div class="bg-gray-50 sm:mt-0 xl:p-4 lg:p-4 md:p-4 pt-20">
         <div class="max-w-full mx-auto lg:flex lg:items-center lg:justify-between">
             <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                 <span class="block text-green-800">#{{ $rifa->id }} {{ $rifa->nome }}</span>
@@ -18,7 +18,7 @@
                 <span class="block text-black">{{ $rifa->descricao }}</span>
             </p>
         </div>
-        <div class="grid grid-cols-2 mx-auto">
+        <div class="grid md:grid-cols-2 sm:grid-cols-1 mx-auto">
             <div class="flex items-center justify-center text-white">
                 @if(!empty($rifa->imagem_url))
                     <img src="{{ $rifa->imagem_url }}" width="100%" />
@@ -31,7 +31,7 @@
                 @endif
             </div>
             <div class="flex items-center justify-center">
-                <div class="grid grid-cols-10 mx-auto gap-3 pl-3">
+                <div class="grid lg:grid-cols-10 md:grid-cols-5 sm:grid-cols-2 mx-auto gap-3 pl-3">
                     @if(!empty($rifa->valores))
                     @foreach($rifa->valores as $valores)
                         @php

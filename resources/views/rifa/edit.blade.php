@@ -17,7 +17,7 @@
 @endsection
 
 @section('content')
-    <div class="mt-10 sm:mt-0">
+    <div class="mt-10 sm:mt-0 sm:mt-0 xl:p-4 lg:p-4 md:p-4 pt-64">
         <div class="md:grid md:grid-cols-3 md:gap-6">
             <div class="md:col-span-12">
                 @isset($rifa)
