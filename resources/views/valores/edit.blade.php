@@ -24,11 +24,11 @@
                 <form action="{{ route('valores.insert') }}" method="POST">
                     <input type="hidden" name="rifa_id" value="{{ $rifa->id }}" />
                     <div class="shadow overflow-hidden sm:rounded-md">
-                        <div class="grid grid-cols-3 gap-1">
+                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-1">
                             @for($i = 1; $i <= $rifa->numeros; $i++)
                             <div class="p-2 bg-white">
-                                <label for="valor_referente[{{$i}}]" class="block text-sm font-medium text-gray-700">Valor para este Número #{{ $i }}</label>
-                                <input type="text" name="valor_referente[{{$i}}]" id="valor_referente[{{$i}}]" maxlength="255" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" value="">
+                                <label for="valor_referente[{{$i}}]" class="block text-sm font-medium text-gray-700">Valor para Número #{{ $i }}</label>
+                                <input type="text" name="valor_referente[{{$i}}]" id="valor_referente[{{$i}}]" maxlength="255" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 bg-gray-300 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" @if(!empty($valores[$i])) value="{{ $valores[$i] }}"@endif>
                             </div>
                             @endfor
                         </div>

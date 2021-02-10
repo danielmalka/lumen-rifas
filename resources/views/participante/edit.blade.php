@@ -10,9 +10,9 @@
     <div class="bg-black shadow sm:shadow-none">
         <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
             <h1 class="text-3xl font-bold leading-tight text-green-800">
-                Rifa: {{ $rifa->nome }} <br />
+                {{ $rifa->nome }} <br />
                 Número #{{ $valor->numero }} <br />
-                Valor da Rifa: {{ $valor->valor_referente }}
+                Valor da Rifa: <span class="text-green-400 animate-pulse">{{ $valor->valor_referente }}</span>
             </h1>
         </div>
     </div>
@@ -29,14 +29,21 @@
                         <div class="px-4 py-5 bg-white sm:p-6">
                             <div class="grid grid-cols-6 gap-6">
                                 <div class="col-span-6 sm:col-span-3">
-                                    <label for="nome_completo" class="block text-sm font-medium text-gray-700">Nome Completo</label>
-                                    <input type="text" name="nome_completo" id="nome_completo" maxlength="255" autocomplete="full-name" class="mt-1 focus:ring-green-500 focus:border-green-500 bg-gray-300 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" value="">
+                                    <label for="nome_completo" class="block text-sm font-medium text-gray-700">Nome Completo*</label>
+                                    <input type="text" name="nome_completo" id="nome_completo" maxlength="255" autocomplete="full-name" class="mt-1 focus:ring-green-500 focus:border-green-500 bg-gray-300 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required value="">
                                 </div>
                                 <div class="col-span-6 sm:col-span-3">
-                                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                                    <input type="email" name="email" id="email" maxlength="255" autocomplete="email" class="mt-1 focus:ring-green-500 focus:border-green-500 bg-gray-300 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" value="">
+                                    <label for="email" class="block text-sm font-medium text-gray-700">Email*</label>
+                                    <input type="email" name="email" id="email" maxlength="255" autocomplete="email" class="mt-1 focus:ring-green-500 focus:border-green-500 bg-gray-300 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" required value="">
                                 </div>
                             </div>
+                        </div>
+                        <div class="px-4 py-5 bg-white sm:p-6">
+                            <p class="text-base">
+                                <span class="text-red-500 font-bold">Atenção</span>
+                                <span class="text-3xl text-red-500 font-bold animate-ping">&excl;</span>
+                                &nbsp;Vamos enviar uma cópia destas informações para o seu email. Dê uma olhadinha na caixa de Spam caso não encontre de imediado! ^,~
+                            </p>
                         </div>
                         <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
                             <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">

@@ -25,6 +25,6 @@ class Participante extends Model
 
     public function valor()
     {
-        return $this->hasOne(Valores::class);
+        return $this->belongsTo(Valores::class, 'rifa_valores_id');
     }
 }
