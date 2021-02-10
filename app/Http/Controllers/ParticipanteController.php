@@ -16,7 +16,9 @@ class ParticipanteController extends Controller
     public function create(int $rifaId, int $valorId)
     {
         $rifa = Rifas::find($rifaId);
-        $valor = Valores::find($valorId);
+        $valor = Valores::where('numero', $valorId)
+            ->where('rifa_id', $rifaId)
+            ->first();
         return view('participante.edit', [
             'rifa' => $rifa,
             'valor' => $valor

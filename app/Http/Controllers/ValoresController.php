@@ -23,11 +23,10 @@ class ValoresController extends Controller
         $data = $request->all();
         unset($data['route']);
         foreach($data['valor_referente'] as $numero => $valor) {
-            $novoValor = new Valores();
-            $novoValor->rifa_id = $data['rifa_id'];
-            $novoValor->numero = $numero;
-            $novoValor->valor_referente = $valor;
-            $novoValor->save();
+            $novoValor = Valores::updateOrCreate(
+                ['rifa_id' =>  $data['rifa_id'], 'numero' => $numero],
+                ['valor_referente' => $valor]
+            );
         }
         return redirect()
             ->route('rifa.index', ['id' => $data['rifa_id']]);
