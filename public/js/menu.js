@@ -1,5 +1,5 @@
-var nav = document.getElementById('site-menu');
-var header = document.getElementById('top');
+let nav = document.getElementById('site-menu');
+let header = document.getElementById('top');
 
 window.addEventListener('scroll', function() {
     if (window.scrollY >=400) { // adjust this value based on site structure and header image height
@@ -12,8 +12,8 @@ window.addEventListener('scroll', function() {
 });
 
 function navToggle() {
-    var btn = document.getElementById('menuBtn');
-    var nav = document.getElementById('menu');
+    let btn = document.getElementById('menuBtn');
+    let nav = document.getElementById('menu');
 
     btn.classList.toggle('open');
     nav.classList.toggle('flex');
