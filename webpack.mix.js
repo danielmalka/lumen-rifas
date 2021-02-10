@@ -19,7 +19,7 @@ mix.autoload({
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix.js('././node_modules/gasparesganga-jquery-loading-overlay/src/loadingoverlay.js','public/js/all.js')
     .sass('resources/sass/app.scss', 'public/css')
     .webpackConfig({
         resolve: {

@@ -26,7 +26,8 @@
             @yield('content')
         </main>
     </div>
+    <script src="{{ url('js/all.js') }}"></script>
     <script src="{{ url('js/menu.js') }}"></script>
-    <script src="{{ url('js/app.js') }}"></script>
+    <script src="{{ url('js/overlay.js') }}"></script>
 </body>
 </html>
